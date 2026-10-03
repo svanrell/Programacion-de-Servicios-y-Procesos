@@ -4,7 +4,7 @@ Repositorio que contiene las prácticas, actividades y proyectos de la asignatur
 
 ---
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 ### 📂 [Ejercicios básicos de Java](Ejercicios%20básicos%20de%20Java)
 Repaso inicial de Programación Orientada a Objetos (POO), estructuras de control y herencia en Java:
@@ -39,7 +39,7 @@ Repaso inicial de Programación Orientada a Objetos (POO), estructuras de contro
 
 ---
 
-## 🚀 Requisitos y Ejecución
+##  Requisitos y Ejecución
 
 ### Requisitos
 - **Java JDK 17 o superior** instalado.
