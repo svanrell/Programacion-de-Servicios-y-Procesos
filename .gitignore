@@ -1,0 +1,33 @@
+# Archivos compilados de Java
+*.class
+
+# Directorios de salida de compilación
+out/
+bin/
+build/
+target/
+
+# Archivos y carpetas de IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Archivos de Eclipse
+.project
+.classpath
+.settings/
+
+# Archivos de VS Code
+.vscode/
+
+# Archivos del sistema operativo (macOS)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Logs y volcados de memoria
+*.log
+hs_err_pid*
+replay_pid*
