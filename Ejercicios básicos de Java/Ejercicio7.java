@@ -4,7 +4,7 @@ public class Ejercicio7 {
         private double peso;
         private double combustible;
         private double kmRecorridos;
-        private final double combustibleInicial; // el combustine incial no tiene sentido que cambie
+        private final double combustibleInicial; // el combustible inicial no tiene sentido que cambie
 
         public Vehiculo(String marca, double peso, double combustible, double kmRecorridos) {
             this.marca = marca;
@@ -142,9 +142,9 @@ public class Ejercicio7 {
     }
 
     public static class Carrera {
-        private Vehiculo vehiculo1;
-        private Vehiculo vehiculo2;
-        private double kilometrajeMeta;
+        private final Vehiculo vehiculo1;
+        private final Vehiculo vehiculo2;
+        private final double kilometrajeMeta;
 
         public Carrera(Vehiculo vehiculo1, Vehiculo vehiculo2, double kilometrajeMeta) {
             this.vehiculo1 = vehiculo1;
