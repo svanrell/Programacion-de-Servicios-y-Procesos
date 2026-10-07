@@ -37,6 +37,12 @@ Repaso inicial de Programación Orientada a Objetos (POO), estructuras de contro
   - Subclases `Coche` (con `numeroPuertas`) y `Moto` (con `tieneCarenado`).
   - Clase `Carrera` que simula una competición por turnos entre dos vehículos indicando la posición en cabeza y el combustible consumido.
 
+- **[Ejercicio 8: Gestión de Streaming y Suscripciones](Ejercicios%20básicos%20de%20Java/Ejercicio8.java)**
+  - Clase `Persona` para gestión de usuarios, saldo disponible, gasto acumulado y estado de suscripción.
+  - Clase abstracta `Contenido` con fechas (`LocalDate`), cálculo de días con `ChronoUnit` y método `reproducir()`.
+  - Subclases `Pelicula` y `Serie` con cuotas base mensuales, control de vigencia y sobrescritura de métodos (`@Override`).
+  - Polimorfismo mediante catálogo de contenidos (`List<Contenido>`) y recomendaciones según la duración.
+
 ---
 
 ##  Requisitos y Ejecución
