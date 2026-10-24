@@ -6,7 +6,7 @@ Repositorio que contiene las prácticas, actividades y proyectos de la asignatur
 
 ## Estructura del Repositorio
 
-### 📂 [Ejercicios básicos de Java](Ejercicios%20básicos%20de%20Java)
+### [Ejercicios básicos de Java](Ejercicios%20básicos%20de%20Java)
 Repaso inicial de Programación Orientada a Objetos (POO), estructuras de control y herencia en Java:
 
 - **[Ejercicio 1: Calculadora de Stock y Descuentos](Ejercicios%20básicos%20de%20Java/Ejercicio1.java)**
