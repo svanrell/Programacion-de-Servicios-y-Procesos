@@ -45,7 +45,18 @@ Repaso inicial de Programación Orientada a Objetos (POO), estructuras de contro
 
 ---
 
-##  Requisitos y Ejecución
+### [Ejercicios Hilos](Ejercicios%20Hilos)
+Prácticas de programación concurrente, gestión y sincronización de hilos en Java:
+
+- **[Ejercicio 4: Sistema de Reservas y Sincronización de Hilos](Ejercicios%20Hilos/Ejercicio4/reserva.java)**
+  - Simulación de reserva concurrente de plazas de avión con 200 hilos agentes (`AgenteVentas`) para 100 asientos disponibles.
+  - Sincronización de secciones críticas mediante bloque `synchronized` sobre un cerrojo (`Object`).
+  - Control de concurrencia y acceso seguro al recurso compartido (`SistemaReservas`).
+  - Sincronización y espera de finalización de todos los hilos con `join()`.
+
+---
+
+## Requisitos y Ejecución
 
 ### Requisitos
 - **Java JDK 17 o superior** instalado.
@@ -54,10 +65,22 @@ Repaso inicial de Programación Orientada a Objetos (POO), estructuras de contro
 Para compilar y ejecutar cualquiera de los ejercicios desde la terminal:
 
 ```bash
-# Navegar a la carpeta de ejercicios
+# Navegar a la carpeta de ejercicios básicos
 cd "Ejercicios básicos de Java"
 
 # Compilar y ejecutar (ejemplo con Ejercicio 7)
 javac Ejercicio7.java
 java Ejercicio7
 ```
+
+Para los ejercicios de hilos:
+
+```bash
+# Navegar a la carpeta de hilos
+cd "Ejercicios Hilos"
+
+# Compilar y ejecutar Ejercicio 4
+javac Ejercicio4/reserva.java
+java Ejercicio4.reserva
+```
+
