@@ -4,7 +4,7 @@ public class Ejercicio7 {
         private double peso;
         private double combustible;
         private double kmRecorridos;
-        private final double combustibleInicial; // el combustible inicial no tiene sentido que cambie
+        private final double combustibleInicial;
 
         public Vehiculo(String marca, double peso, double combustible, double kmRecorridos) {
             this.marca = marca;

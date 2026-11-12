@@ -14,10 +14,7 @@ Hay dos procesos Java separados, conectados mediante una tubería (`|`) y con re
 Abre la terminal en esta carpeta:
 
 ```bash
-# 1. Compilar
 javac GeneradorNotas.java FiltroReporte.java
-
-# 2. Ejecutar la cadena (ejemplo con 20 notas)
 { java GeneradorNotas 20 | java FiltroReporte; } > aprobados.txt 2> debug.log
 ```
 

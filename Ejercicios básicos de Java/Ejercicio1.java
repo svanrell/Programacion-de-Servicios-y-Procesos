@@ -23,7 +23,6 @@ class Calculadora {
     private int cantidadStock;
     private double precioProducto;
 
-    // El final no se puede modificar ni en el constructor ni en métodos de la clase, por tanto, se hace public para que se pueda acceder por fuera de la clase directamente y se hace estática para que se instance una vez
     public static final double FINAL_DESCUENTO = 0.10;
     public static final double IVA = 0.21;
 

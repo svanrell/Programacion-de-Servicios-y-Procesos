@@ -90,14 +90,10 @@ Prácticas de programación concurrente, gestión y sincronización de hilos en 
 
 #### 1. Ejercicios básicos de Java
 ```bash
-# Navegar a la carpeta de ejercicios básicos
 cd "Ejercicios básicos de Java"
-
-# Compilar y ejecutar (ejemplo con Ejercicio 7)
 javac Ejercicio7.java
 java Ejercicio7
 
-# Para la versión modular del Ejercicio 6:
 cd Ejercicio06_SistemaEmpleados
 javac *.java
 java Main
@@ -105,29 +101,23 @@ java Main
 
 #### 2. Ejercicios de Procesos
 ```bash
-# Actividad 1: Tuberías y redirecciones
 cd "Ejercicios Procesos/Actividad01_SistemaNotasReportes"
 javac GeneradorNotas.java FiltroReporte.java
-
-# Ejecución con tubería y redirección
 { java GeneradorNotas 20 | java FiltroReporte; } > aprobados.txt 2> debug.log
 ```
 
 #### 3. Ejercicios de Hilos
 ```bash
-# Actividad 2: Secuencial vs Concurrente
 cd "Ejercicios Hilos/Actividad02_SecuencialVsConcurrente"
 javac *.java
 java EjecucionSecuencial
 java EjecucionConcurrente
 java ContarNumeros
 
-# Ejercicio 4: Reserva de asientos
 cd "Ejercicios Hilos"
 javac Ejercicio4/reserva.java
 java Ejercicio4.reserva
 
-# Actividad 5: Servicio de descargas
 cd "Ejercicios Hilos/Actividad05_ServicioDescargas"
 javac *.java
 java ServicioDescargas

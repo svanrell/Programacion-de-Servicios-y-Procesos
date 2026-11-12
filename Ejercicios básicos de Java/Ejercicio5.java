@@ -13,7 +13,7 @@ public class Ejercicio5 {
         heroe.recibirDanio(45.5);
 
         System.out.println("\n[Ataque 3]");
-        heroe.recibirDanio(35.0); // La vida llega a <= 0 y avisa que ha sido derrotado
+        heroe.recibirDanio(35.0);
 
         System.out.println("\n[Ataque 4 (intento tras ser derrotado)]");
         heroe.recibirDanio(10.0);
@@ -21,7 +21,6 @@ public class Ejercicio5 {
         System.out.println("\nEstado final del héroe:");
         System.out.println(heroe);
 
-        // SIMULACIÓN:
         System.out.println("  SIMULACIÓN: COMBATE ENTRE DOS RIVALES");
 
         Personaje personaje1 = new Personaje("Sergi", 1, 100.0, 25.0);
@@ -45,11 +44,9 @@ public class Ejercicio5 {
         while (personaje1.getPuntosVida() > 0 && personaje2.getPuntosVida() > 0) {
             System.out.println("\n--- Ronda " + ronda + " ---");
 
-            // Personaje 1 ataca a Personaje 2
             System.out.println(personaje1.getNombre() + " ataca a " + personaje2.getNombre() + ":");
             personaje2.recibirDanio(personaje1.getDanio());
 
-            // Si el personaje 2 sigue con vida, contraataca
             if (personaje2.getPuntosVida() > 0) {
                 System.out.println(personaje2.getNombre() + " contraataca a " + personaje1.getNombre() + ":");
                 personaje1.recibirDanio(personaje2.getDanio());
