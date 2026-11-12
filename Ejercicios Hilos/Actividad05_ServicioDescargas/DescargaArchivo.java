@@ -1,8 +1,5 @@
 import java.util.Random;
 
-/**
- * Hilo que atiende una solicitud de descarga.
- */
 public class DescargaArchivo implements Runnable {
 
     private static final long DURACION_DESCARGA_MS = 3000;
@@ -21,10 +18,9 @@ public class DescargaArchivo implements Runnable {
         String archivo = "archivo_" + numSolicitud + ".zip";
         String hilo = Thread.currentThread().getName();
         try {
-            // Si ya hay 2 descargas en curso, este hilo se bloquea aquí hasta que una termine
             servicio.getSemaforo().acquire();
             try {
-                int tokens = random.nextInt(1, 6); // entre 1 y 5
+                int tokens = random.nextInt(1, 6);
                 if (!servicio.consumirTokens(tokens)) {
                     System.out.println("Solicitud #" + numSolicitud + " rechazada: necesita " + tokens
                             + " tokens y solo quedan " + servicio.getTokensDisponibles() + ".");
@@ -34,12 +30,12 @@ public class DescargaArchivo implements Runnable {
                 System.out.println("Descargando " + archivo + " en " + hilo
                         + " (consume " + tokens + " tokens, quedan " + servicio.getTokensDisponibles() + ")");
 
-                Thread.sleep(DURACION_DESCARGA_MS); // simula la descarga
+                Thread.sleep(DURACION_DESCARGA_MS);
 
                 int total = servicio.registrarDescarga();
                 System.out.println("Descarga #" + numSolicitud + " completada. (total descargas: " + total + ")");
             } finally {
-                servicio.getSemaforo().release(); // libera el hueco para otra descarga
+                servicio.getSemaforo().release();
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

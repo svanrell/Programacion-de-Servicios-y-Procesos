@@ -2,10 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * CONSUMIDOR: lee registros NOTA:VALOR línea a línea desde la entrada estándar (System.in),
- * escribe en System.out solo los "Aprobado" y al final muestra el resumen en System.err.
- */
 public class FiltroReporte {
 
     public static void main(String[] args) {
@@ -13,7 +9,7 @@ public class FiltroReporte {
 
         try (BufferedReader lector = new BufferedReader(new InputStreamReader(System.in))) {
             String linea;
-            while ((linea = lector.readLine()) != null) { // null = fin de la entrada
+            while ((linea = lector.readLine()) != null) {
                 String[] partes = linea.trim().split(":");
                 if (partes.length == 2 && partes[1].equals("Aprobado")) {
                     aprobados++;

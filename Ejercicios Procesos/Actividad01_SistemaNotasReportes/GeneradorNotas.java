@@ -1,12 +1,5 @@
 import java.util.Random;
 
-/**
- * PRODUCTOR: genera N notas aleatorias con formato NOTA:VALOR
- * y las escribe en la salida estándar (System.out).
- * Los mensajes de depuración van a la salida de error (System.err).
- *
- * Uso: java GeneradorNotas <numeroDeNotas>
- */
 public class GeneradorNotas {
 
     public static void main(String[] args) {
@@ -29,7 +22,7 @@ public class GeneradorNotas {
 
         Random random = new Random();
         for (int i = 0; i < total; i++) {
-            int nota = random.nextInt(0, 11); // 0 a 10, ambos incluidos
+            int nota = random.nextInt(0, 11);
             String valor = (nota >= 5) ? "Aprobado" : "Suspendido";
             System.out.println(nota + ":" + valor);
         }

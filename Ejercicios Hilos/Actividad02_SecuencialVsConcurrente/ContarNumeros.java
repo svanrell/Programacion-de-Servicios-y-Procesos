@@ -1,13 +1,8 @@
-/**
- * Pregunta 4: cuenta (suma) los números del 1 al 1000 de forma secuencial
- * y de forma concurrente con varios hilos, y compara los tiempos.
- */
 public class ContarNumeros {
     private static final int LIMITE = 1000;
     private static final int NUM_HILOS = 4;
 
     public static void main(String[] args) throws InterruptedException {
-        // --- Versión secuencial ---
         long inicioSec = System.nanoTime();
         long sumaSec = 0;
         for (int i = 1; i <= LIMITE; i++) {
@@ -15,9 +10,8 @@ public class ContarNumeros {
         }
         long tiempoSec = System.nanoTime() - inicioSec;
 
-        // --- Versión concurrente ---
         long inicioConc = System.nanoTime();
-        long[] parciales = new long[NUM_HILOS]; // cada hilo escribe solo en su posición: no hay condición de carrera
+        long[] parciales = new long[NUM_HILOS];
         Thread[] hilos = new Thread[NUM_HILOS];
         int tramo = LIMITE / NUM_HILOS;
 
@@ -43,7 +37,6 @@ public class ContarNumeros {
         }
         long tiempoConc = System.nanoTime() - inicioConc;
 
-        // --- Resultados ---
         System.out.println("Secuencial  -> suma = " + sumaSec + " | tiempo = " + tiempoSec / 1000 + " µs");
         System.out.println("Concurrente -> suma = " + sumaConc + " | tiempo = " + tiempoConc / 1000 + " µs (" + NUM_HILOS + " hilos)");
 

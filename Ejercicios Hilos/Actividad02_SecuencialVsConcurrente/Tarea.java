@@ -1,6 +1,3 @@
-/**
- * Tarea que simula un trabajo que tarda 1 segundo (por ejemplo, una descarga o una consulta).
- */
 public class Tarea implements Runnable {
     private final int id;
 
@@ -13,7 +10,7 @@ public class Tarea implements Runnable {
         String hilo = Thread.currentThread().getName();
         System.out.println("Tarea " + id + " iniciada en el hilo: " + hilo);
         try {
-            Thread.sleep(1000); // simula 1 segundo de trabajo
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
