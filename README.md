@@ -58,6 +58,11 @@ Prácticas sobre creación, gestión, monitorización y comunicación entre proc
   - Cuestionario y análisis práctico de la gestión del sistema operativo: diferencias clave entre programas, procesos e hilos.
   - Estudio del comportamiento de procesos padre e hijos (ej. Google Chrome / VS Code y sus helpers/renderers) y el ciclo de vida de los procesos en ejecución.
 
+- **[Actividad 2: NetDiag - Diagnóstico de Red](Ejercicios%20Procesos/Actividad02_NetDiag/NetDiag.java)**
+  - Herramienta de consola que lanza `ping` mediante `ProcessBuilder`, adaptando el parámetro de paquetes según el sistema operativo (`-n` en Windows, `-c` en GNU/Linux/macOS).
+  - Configuración del directorio de trabajo en la carpeta temporal (`java.io.tmpdir`) y de la variable de entorno `AUDITOR_RED`.
+  - Salida en tiempo real con `inheritIO()` y comprobación del código de salida con `waitFor()`.
+
 ---
 
 ### [Ejercicios Hilos](Ejercicios%20Hilos)
@@ -104,6 +109,10 @@ java Main
 cd "Ejercicios Procesos/Actividad01_SistemaNotasReportes"
 javac GeneradorNotas.java FiltroReporte.java
 { java GeneradorNotas 20 | java FiltroReporte; } > aprobados.txt 2> debug.log
+
+cd "Ejercicios Procesos/Actividad02_NetDiag"
+javac NetDiag.java
+java NetDiag
 ```
 
 #### 3. Ejercicios de Hilos
